@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Players | Fantasy Football</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="site-brand">
+          <a href="/">
+            <img src="./assets/images/helmet.png" alt="logo" />
+          </a>
+        </div>
+        <ul class="links">
+          <li class="link"><a href="teams.html">Teams</a></li>
+          <li class="link"><a href="players.html">Players</a></li>
+          <li class="link">
+            <a href="teams-ranking.html">Top Team Rankings</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <aside>
+        <div class="well">
+          <h4>Players</h4>
+
+          <div class="form-group">
+            <label for="players-team">Team</label>
+            <select id="players-team" class="form-control"></select>
+          </div>
+          
+          <div class="form-group">
+            <label for="season">Season</label>
+            <select id="seasons" class="form-control">
+              <option value="2018">2018</option>
+              <option value="2017">2017</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <p>Positions</p>
+            <label class="checkbox-inline"
+            ><input type="checkbox" checked value="WR" />WR</label
+          >
+          <label class="checkbox-inline"
+            ><input type="checkbox" value="TE" />TE</label
+          >
+          <label class="checkbox-inline"
+            ><input type="checkbox" value="RB" />RB</label
+          >
+          </div>
+        </div>
+
+        <div class="well">
+          <h4>Defense</h4>
+          <div class="form-group">
+            <label for="defense-teams">Team</label>
+            <select id="defense-teams" class="form-control"></select>
+          </div>
+        </div>
+
+      </aside>
+      <section>
+        <h2>Players</h2>
+        <table id="players-table" class="display compact">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Name</th>
+              <th>Pos</th>
+              <th>Team</th>
+              <th>Tar</th>
+              <th>Rec</th>
+              <th>Rec Yards</th>
+              <th>Air Yards</th>
+              <th>YAC</th>
+              <th>TD</th>
+              <th>aDOT</th>
+              <th>RACR</th>
+              <th>MS Air</th>
+              <th>Target Share</th>
+              <th>WOPR</th>
+              <th>PPR Pts</th>
+            </tr>
+          </thead>
+        </table>
+
+        <br />
+        <hr />
+        <br />
+
+        <h2>Defense</h2>
+        <table id="defense-table" class="display compact">
+          <thead>
+            <tr>
+              <th>Team</th>
+              <th>Season</th>
+              <th>Tar</th>
+              <th>Rec</th>
+              <th>Catch %</th>
+              <th>Rec Yards</th>
+              <th>Air Yards</th>
+              <th>YAC</th>
+              <th>Pass TD</th>
+              <th>aDOT</th>
+              <th>RACR</th>
+              <th>Rush Att</th>
+              <th>Rush Yards</th>
+              <th>YPC Against</th>
+              <th>Rush TD</th>
+            </tr>
+          </thead>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy;Copyright 2019. All rights reserved</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="./assets/js/players.js"></script>
+    <script src="./assets/js/defense.js"></script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Teams | Fantasy Football</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div  class="site-brand">
+          <a href="/">
+            <img src="./assets/images/helmet.png" alt="logo" />
+          </a>
+        </div>
+        <ul class="links">
+          <li class="link"><a href="teams.html">Teams</a></li>
+          <li class="link"><a href="players.html">Players</a></li>
+          <li class="link">
+            <a href="teams-ranking.html">Top Team Rankings</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <aside>
+        <div class="form-group">
+          <label for="teams">Team</label>
+          <select id="teams" class="form-control"></select>
+        </div>
+
+        <div class="form-group">
+          <label for="positions">
+            Positions
+          </label>
+          <select id="positions" class="form-control">
+            <option value="WR">WR</option>
+            <option value="QB">QB</option>
+            <option value="TE">TE</option>
+            <option value="RB">RB</option>
+            <option value="LB">LB</option>
+            <option value="DE">DE</option>
+            <option value="DT">DT</option>
+            <option value="SS">SS</option>
+            <option value="NT">NT</option>
+            <option value="FS">FS</option>
+            <option value="T">T</option>
+            <option value="C">C</option>
+            <option value="G">G</option>
+            <option value="CB">CB</option>
+          </select>
+        </div>
+      </aside>
+      <section>
+        <h2>Teams</h2>
+        <table id="positions-table" class="display compact" style="width:100%">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Pos</th>
+              <th>Team</th>
+              <th>Off Snaps</th>
+              <th>Off Snap %</th>
+              <th>Def Snaps</th>
+              <th>Def Snap %</th>
+              <th>ST Snaps</th>
+              <th>ST Snap %</th>
+            </tr>
+          </thead>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy;Copyright 2019. All rights reserved</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="./assets/js/teams.js"></script>
+  </body>
+</html>
