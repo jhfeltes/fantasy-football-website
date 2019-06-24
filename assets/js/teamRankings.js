@@ -7,7 +7,7 @@ $(document).ready(function() {
   const teams$ = $("#teams");
 
   // make network request to fetch team list data
-  $.get("../data/teams.json", function(teams) {
+  $.get("./data/teams.json", function(teams) {
     const [x, ...allTeams] = teams.data;
     teams$.html(
       allTeams
@@ -16,7 +16,7 @@ $(document).ready(function() {
     );
   });
 
-  $.get("../data/team-rankings.json", function(data) {
+  $.get("./data/team-rankings.json", function(data) {
     stats = data;
     getTeamStat(season, teamName); // display data in table
   });

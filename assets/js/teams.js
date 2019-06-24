@@ -7,7 +7,7 @@ $(document).ready(function() {
   const teams$ = $("#teams"); // get select element on page
 
   // make network request to fetch team list data
-  $.get("../data/teams.json", function(teams) {
+  $.get("./data/teams.json", function(teams) {
     const [x, ...allTeams] = teams.data;
     teams$.html(
       allTeams
@@ -17,7 +17,7 @@ $(document).ready(function() {
   });
 
   // make network request to fetch team positions data
-  $.get("../data/team-positions.json", function(data) {
+  $.get("./data/team-positions.json", function(data) {
     stats = data;
     getTeamPositionStat(position, teamName);
   });

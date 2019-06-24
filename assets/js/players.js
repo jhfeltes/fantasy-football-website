@@ -9,7 +9,7 @@ $(document).ready(function() {
   const defenseTeams$ = $("#defense-teams");
 
   // make network request to fetch team list data
-  $.get("../data/teams.json", function(teams) {
+  $.get("./data/teams.json", function(teams) {
     const allTeams = teams.data
       .map(
         team =>
@@ -22,7 +22,7 @@ $(document).ready(function() {
   });
 
   // make network request to fetch players stats
-  $.get("../data/players.json", function(stats) {
+  $.get("./data/players.json", function(stats) {
     playersStats = stats;
 
     getPlayersStats(season);

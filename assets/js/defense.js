@@ -5,7 +5,7 @@ $(document).ready(function() {
   const defenseTeams$ = $("#defense-teams");
 
   // make network request to fetch defense stats
-  $.get("../data/defense.json", function(stats) {
+  $.get("./data/defense.json", function(stats) {
     defenseStats = stats.data.map(stat => {
       const [x, ...defenseStat] = stat;
       return defenseStat;
